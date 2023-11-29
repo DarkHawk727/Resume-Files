@@ -1,0 +1,224 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\textbf{\Huge \scshape Arjun Sarao}} \\ \vspace{1pt}
+     \href{mailto:arjun.sarao@uwaterloo.ca}{\underline{arjun.sarao@uwaterloo.ca}} $|$ 
+    \href{https://www.linkedin.com/in/arjun-sarao-bb555b1b4/}{\underline{linkedin.com/in/arjun-sarao}} $|$
+    \href{https://github.com/DarkHawk727}{\underline{github.com/DarkHawk727}}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Full Stack Web Developer}{May 2022 -- December 2022}
+      {Starai Tutoring}{}
+      \resumeItemListStart
+        \resumeItem{Designed and wire-framed a responsive, multi-page static website based on client specifications in \textbf{Figma}.}
+        \resumeItem{Developed the website using \textbf{JavaScript (React.js)} in conjunction with
+        \textbf{Bulma.css}, hosted it on \textbf{GitHub Pages}.}
+        \resumeItem{Implemented sign-up form submission via \textbf{Firebase} cloud-function and SMS notifications with \textbf{Twilio}.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Deep Work Tracker} $|$ \emph{Web-App for Productivity Tracking.}}{September 2023}
+          \resumeItemListStart
+                \resumeItem {Scripted and deployed application interface using \textbf{Streamlit}.}
+                \resumeItem {Added metrics such as time between accomplishments, churn-rate, and activity graph}
+                \resumeItem {Stored data in \textbf{Supabase}, created custom \textbf{SQL} commands to query, integrated with \textbf{Python} client.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Personal AI} $|$ \emph{LLM-Powered Web-app for University Help.}}{August 2023}
+          \resumeItemListStart
+                \resumeItem {Created  and deployed a multi-page front-end using \textbf{Streamlit}.}
+                \resumeItem {Integrated \textbf{GPT-4} via \textbf{LangChain} to provide enhanced, domain-specific, knowledge such as PDF Q\&A, Flashcard Generation, and Math Help via \textbf{sympy}.}
+                \resumeItem{Augmented retrieval with \textbf{chromadb} to store text embeddings on disk to save repeat costs and add additional context to queries.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Philosopedia} $|$ \emph{AI-powered Flutter app for Stanford Encyclopedia of Philosophy.}}{August 2023}
+          \resumeItemListStart
+                \resumeItem {Created and wireframed UX using \textbf{Figma}, Developed \textbf{Flutter (Dart)} application with use of \textbf{RapidAPI} for content aggregation.}
+                \resumeItem {Rendered text in frontend using \textbf{bionic-reading}.}
+                \resumeItem {Passed entry preamble to \textbf{HuggingFace} (BART) for summarization and then onto \textbf{OpenAI's GPT-4} for question generation.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bachelor of Computer Science (CO-OP)}{University of Waterloo}
+      {}{Sept. 2022 -- present}
+      \resumeItemListStart
+      \resumeItem{Member of the Badminton, Computer Science, and Data Science Clubs.}
+      \resumeItem{Awarded the President's Scholarship.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SELF LEARNING----------------
+\section{Self Learning}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Learn Deep Learning for Coders with fastai and PyTorch}}{Present}
+          \resumeItemListStart
+              \resumeItem {Programming exercises designed to teach \textbf{PyTorch}, \textbf{NumPy}, \textbf{Pandas}, \textbf{Matplotlib}, and \textbf{fastai}.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Machine Learning Specialization} $|$ \emph{Coursera}}{August 2022}
+          \resumeItemListStart
+                \resumeItem {Supervised Machine Learning: Regression and Classification (\textbf{Linear Regression, Logistic Regression})}
+                \resumeItem {Advanced Learning Algorithms (\textbf{Neural Networks, Decision Trees})}
+                \resumeItem {Unsupervised Learning, Recommenders, Reinforcement Learning (\textbf{Clustering, Anomaly Detection, Collaborative Filtering, Deep Q-Learning})}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Deep Learning Specialization} $|$ \emph{Coursera}}{July 2022}
+          \resumeItemListStart
+                \resumeItem {Neural Networks and Deep Learning (\textbf{NNs})}
+                \resumeItem {Improving Deep Neural Networks: Hyperparameter Tuning, Regularization, and Optimization}
+                \resumeItem {Convolutional Neural Networks (\textbf{CNNs})}
+                \resumeItem {Sequence Models (\textbf{RNNs, GRUs, LSTMs, Transformer Networks})}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PERSONAL ACHIEVMENTS-----------
+\section{Personal Achievements}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Cadets}{: Appointed Regulating Petty Officer, Obtained CanSail 1\&2, achieved rank of Chief Petty Officer 2nd Class} \\
+     \textbf{Sports}{: Represented school at city and district levels for badminton and swimming.} \\
+     \textbf{Hackathons}{: 2x Google Cloud Prize Recipient (\emph{UncommonHacks, Hack-o-Lantern}), 1st place People's Choice (\emph{WinHacks 2021}), Best Theme Hack (\emph{PreHackstoric}) } \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
