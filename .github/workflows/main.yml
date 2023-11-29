@@ -1,5 +1,11 @@
 name: Compile and Upload LaTeX PDF
-on: [push]
+
+# Trigger the workflow on push events to the main branch
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build_and_upload:
     runs-on: ubuntu-latest
@@ -7,19 +13,28 @@ jobs:
     steps:
     - name: Set up Git repository
       uses: actions/checkout@v3
+
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@v3
       with:
         root_file: main.tex
+
     - name: Upload PDF file as Artifact
       uses: actions/upload-artifact@v3
       with:
         name: PDF
         path: main.pdf
+
+    - name: Create a new tag
+      id: new_tag
+      run: |
+        DATE=$(date +'%Y%m%d%H%M%S')
+        echo "RELEASE_TAG=v$DATE" >> $GITHUB_ENV
+
     - name: Create Release
-      id: create_release
       uses: softprops/action-gh-release@v0.1.15
       with:
+        tag_name: ${{ env.RELEASE_TAG }}
         files: main.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
