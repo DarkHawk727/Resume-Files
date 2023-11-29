@@ -1,6 +1,5 @@
 name: Compile and Upload LaTeX PDF
 
-# Trigger the workflow on push events to the main branch
 on:
   push:
     branches:
@@ -25,16 +24,14 @@ jobs:
         name: PDF
         path: main.pdf
 
-    - name: Create a new tag
-      id: new_tag
-      run: |
-        DATE=$(date +'%Y%m%d%H%M%S')
-        echo "RELEASE_TAG=v$DATE" >> $GITHUB_ENV
+    - name: Get number of commits
+      id: get_commits
+      run: echo "COMMIT_COUNT=$(git rev-list --count HEAD)" >> $GITHUB_ENV
 
     - name: Create Release
       uses: softprops/action-gh-release@v0.1.15
       with:
-        tag_name: ${{ env.RELEASE_TAG }}
+        tag_name: "release-${{ env.COMMIT_COUNT }}"
         files: main.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
