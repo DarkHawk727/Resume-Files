@@ -105,32 +105,38 @@
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://sourabhbajaj.com/}{\Large Arjun Sarao}} & \href{mailto:arjun.sarao@uwaterloo.ca}arjun.sarao@uwaterloo.ca} &
+  \href{https://arjunsarao.dev/}{https://arjunsarao.dev/} & 
+  \href{https://github.com/DarkHawk727}{https://github.com/DarkHawk727} \\
+\end{tabular*}
 
-\begin{center}
-    {\textbf{\Huge \scshape Arjun Sarao}} \\ \vspace{1pt}
-     \href{mailto:arjun.sarao@uwaterloo.ca}{\underline{arjun.sarao@uwaterloo.ca}} $|$ 
-    \href{https://www.linkedin.com/in/arjun-sarao-bb555b1b4/}{\underline{linkedin.com/in/arjun-sarao}} $|$
-    \href{https://github.com/DarkHawk727}{\underline{github.com/DarkHawk727}}
-\end{center}
+% \begin{center}
+%     {\textbf{\Huge \scshape Arjun Sarao}} \\ \vspace{1pt}
+%      \href{mailto:arjun.sarao@uwaterloo.ca}{\underline{arjun.sarao@uwaterloo.ca}} $|$ 
+%     \href{https://www.linkedin.com/in/arjun-sarao-bb555b1b4/}{\underline{linkedin.com/in/arjun-sarao}} $|$
+%     \href{https://github.com/DarkHawk727}{\underline{github.com/DarkHawk727}}
+% \end{center}
 
 
 %-----------EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Full Stack Web Developer}{May 2022 -- December 2022}
-      {Starai Tutoring}{}
+    \resumeProjectHeading
+      {\textbf{AI Solution Specialist} $|$ \emph{City of Hamilton ITS}}{Jan 2024 -- Present}
       \resumeItemListStart
-        \resumeItem{Designed and wire-framed a responsive, multi-page static website based on client specifications in \textbf{Figma}.}
-        \resumeItem{Developed the website using \textbf{JavaScript (React.js)} in conjunction with
+        \resumeItem{Developed Retrieval Augmented Generation chatbot web app using \textbf{embedchain}, \textbf{AzureOpenAI}, \textbf{streamlit}, and \textbf{chromadb}.}
+        \resumeItem{Researched and presented business use-cases and capabilities of cutting-edge generative AI tools to stakeholders.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Full-Stack Web Developer} $|$ \emph{Starai Tutoring}}{May 2022 -- March 2023}
+      \resumeItemListStart
+        \resumeItem{Informed, shaped client POV; Wire-framed a responsive, multi-page static website based on business needs in \textbf{Figma}.}
+        \resumeItem{Developed  website using \textbf{JavaScript (React.js)} in conjunction with
         \textbf{Bulma.css}, hosted it on \textbf{GitHub Pages}.}
         \resumeItem{Implemented sign-up form submission via \textbf{Firebase} cloud-function and SMS notifications with \textbf{Twilio}.}
       \resumeItemListEnd
+\resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
 %    \resumeSubSubheading
@@ -140,60 +146,55 @@
 %          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
 %     \resumeItemListEnd
 %    \resumeSubHeadingListEnd
-%-------------------------------------------
-  \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+            \resumeProjectHeading
+          {\textbf{ARM-LEG Simulator} $|$ \emph{Pseudo-ARM Assembly Simulator written in Python}}{November 2023}
+          \resumeItemListStart
+                \resumeItem {Wrote CLI program following modular design \textbf{Python} best practices, and Object-Oriented Design principles.}
+                \resumeItem {Added test-suite using \textbf{pytest} and linting using \textbf{ruff}, integrated them into \textbf{GitHub Actions}.}
+          \resumeItemListEnd
         \resumeProjectHeading
-          {\textbf{Deep Work Tracker} $|$ \emph{Web-App for Productivity Tracking.}}{September 2023}
+          {\textbf{DeepLog} $|$ \emph{MacOS App for Productivity Tracking.}}{November 2023}
           \resumeItemListStart
-                \resumeItem {Scripted and deployed application interface using \textbf{Streamlit}.}
-                \resumeItem {Added metrics such as time between accomplishments, churn-rate, and activity graph}
-                \resumeItem {Stored data in \textbf{Supabase}, created custom \textbf{SQL} commands to query, integrated with \textbf{Python} client.}
+                \resumeItem {Implemented app using \textbf{SwiftUI}.}
+                \resumeItem {Added metrics such as time between accomplishments, churn-rate, and activity graph; stored metrics in \textbf{supabase} database.}
           \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Personal AI} $|$ \emph{LLM-Powered Web-app for University Help.}}{August 2023}
+      % \resumeProjectHeading
+      %     {\textbf{UniGPT} $|$ \emph{LLM-Powered Web-app for University Help.}}{August 2023}
+      %     \resumeItemListStart
+      %           \resumeItem {Created  and deployed a multi-page \textbf{Python} front-end using \textbf{Streamlit}.}
+      %           \resumeItem {Integrated \textbf{GPT-4} via \textbf{LangChain} to provide enhanced, domain-specific, knowledge such as PDF Q\&A, Flashcard Generation, and Math Help via \textbf{sympy}.}
+      %     \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{SeeFood} $|$ \emph{ Image Recognition Java App with TensorFlow CNN}}{January 2022}
           \resumeItemListStart
-                \resumeItem {Created  and deployed a multi-page front-end using \textbf{Streamlit}.}
-                \resumeItem {Integrated \textbf{GPT-4} via \textbf{LangChain} to provide enhanced, domain-specific, knowledge such as PDF Q\&A, Flashcard Generation, and Math Help via \textbf{sympy}.}
-                \resumeItem{Augmented retrieval with \textbf{chromadb} to store text embeddings on disk to save repeat costs and add additional context to queries.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Philosopedia} $|$ \emph{AI-powered Flutter app for Stanford Encyclopedia of Philosophy.}}{August 2023}
-          \resumeItemListStart
-                \resumeItem {Created and wireframed UX using \textbf{Figma}, Developed \textbf{Flutter (Dart)} application with use of \textbf{RapidAPI} for content aggregation.}
-                \resumeItem {Rendered text in frontend using \textbf{bionic-reading}.}
-                \resumeItem {Passed entry preamble to \textbf{HuggingFace} (BART) for summarization and then onto \textbf{OpenAI's GPT-4} for question generation.}
-          \resumeItemListEnd
+                \resumeItem {Curated dataset from Kaggle; Wrote \textbf{Python} scripts for scraping images from google images and preprocessing.}
+                \resumeItem {Wrote model architecture using \textbf{TensorFlow} and \textbf{Keras}; Used elu activation and ADAM optimizer.}
+        \resumeItemListEnd
     \resumeSubHeadingListEnd
-
 
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Bachelor of Computer Science (CO-OP)}{University of Waterloo}
-      {}{Sept. 2022 -- present}
+    \resumeProjectHeading
+      {\textbf{Honours Bachelor of Computer Science (CO-OP)} $|$ \emph{University of Waterloo}}{Sept. 2022 -- present}
       \resumeItemListStart
-      \resumeItem{Member of the Badminton, Computer Science, and Data Science Clubs.}
       \resumeItem{Awarded the President's Scholarship.}
+      \resumeItem{\textbf{Relevant Coursework}: Designing Functional Programs (\textbf{Racket}), Elementary Algorithm Design and Data Abstraction (\textbf{C}), Object-Oriented Software Development (\textbf{C++}), Calculus III, Linear Algebra II}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
+
 
 %-----------SELF LEARNING----------------
 \section{Self Learning}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Learn Deep Learning for Coders with fastai and PyTorch}}{Present}
-          \resumeItemListStart
-              \resumeItem {Programming exercises designed to teach \textbf{PyTorch}, \textbf{NumPy}, \textbf{Pandas}, \textbf{Matplotlib}, and \textbf{fastai}.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Machine Learning Specialization} $|$ \emph{Coursera}}{August 2022}
+          {\textbf{Machine Learning Specialization} $|$ \emph{Stanford Online + Coursera}}{August 2022}
           \resumeItemListStart
                 \resumeItem {Supervised Machine Learning: Regression and Classification (\textbf{Linear Regression, Logistic Regression})}
                 \resumeItem {Advanced Learning Algorithms (\textbf{Neural Networks, Decision Trees})}
@@ -209,14 +210,25 @@
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C/C++, HTML/CSS, Bash} \\
+     \textbf{Developer Tools}{: Git, Google Cloud Platform (Firebase), VS Code, PyCharm, IntelliJ} \\
+     \textbf{Libraries}{:  NumPy, pandas, Matplotlib, langchain, streamlit, sympy, supabase}
+    }}
+ \end{itemize}
+
 %-----------PERSONAL ACHIEVMENTS-----------
 \section{Personal Achievements}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Cadets}{: Appointed Regulating Petty Officer, Obtained CanSail 1\&2, achieved rank of Chief Petty Officer 2nd Class} \\
-     \textbf{Sports}{: Represented school at city and district levels for badminton and swimming.} \\
-     \textbf{Hackathons}{: 2x Google Cloud Prize Recipient (\emph{UncommonHacks, Hack-o-Lantern}), 1st place People's Choice (\emph{WinHacks 2021}), Best Theme Hack (\emph{PreHackstoric}) } \\
-    }}
+      \textbf{Hackathons}{: 2x Google Cloud Prize Recipient (\emph{UncommonHacks, Hack-o-Lantern}), 1st place People's Choice (\emph{WinHacks 2021}), Best Theme Hack (\emph{PreHackstoric}) } \\
+        }
+     % \textbf{Cadets}{: Achieved rank of Chief Petty Officer 2nd Class; Appointed Regulating Petty Officer; Obtained CanSail 1\&2.}}
+     \textbf{Chief Petty Officer 2nd Class}{: Appointed corps Regulating Petty Officer; Certified CanSail 2.}}
  \end{itemize}
 
 
