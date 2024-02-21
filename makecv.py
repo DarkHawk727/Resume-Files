@@ -5,14 +5,31 @@ import os
 import subprocess
 import sys
 
-from langchain.chains import LLMChain
 from langchain_community.document_loaders import AsyncHtmlLoader
 from langchain_community.document_transformers import Html2TextTransformer
 from langchain_openai import OpenAI
+from langchain.output_parsers import StrOutputParser
 from langchain.prompts import PromptTemplate
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+prompt = PromptTemplate(
+    input_variables=["job_listing_text", "resume_text"],
+    template=f"""
+    Please write a cover letter formatted in markdown for the following job listing and resume. \
+    Give me only the letter, no preamble or any other text. DO NOT format the markdown within triple backticks. \
+    Use only experiences, projects, and skills that are directly contained in the resume. \
+    The general format should contain a paragraph talking about the target company, the next should be about how my experience would be an asset to the company. \
+    The final should be how my ClifftonStrengths Finder results would make me good cultural fit. The overall length should not exceed 500 words. DO NOT include any information like my email or address in the header of the letter.:\n\n
+
+    Job Listing:
+    {job_listing_text}\n\n
+
+    Resume:
+    {resume_text}\n\n
+    """,
+)
 
 
 def parse_args():
@@ -62,23 +79,10 @@ async def main() -> None:
 
     job_listing_text = await extract_text(args.url)
 
-    PromptTemplate.from_template(
-        template=f"""
-        Please write a cover letter formatted in markdown for the following job listing and resume. \
-        Give me only the letter, no preamble or any other text. DO NOT format the markdown within triple backticks. \
-        Use only experiences, projects, and skills that are directly contained in the resume:\n\n
+    llm = OpenAI(model="gpt-4", api_key=api_key, max_tokens=1000)
 
-        Job Listing:
-        {job_listing_text}\n\n
-
-        Resume:
-        {resume_text}\n\n
-        """
-    )
-
-    # Maybe use chain = prompt | model | StrOutputParser()
-    llm_chain = LLMChain(llm=OpenAI(model="gpt-4", api_key=api_key, max_tokens=1000))
-    cover_letter = llm_chain.invoke(input={"prompt": PromptTemplate.get_template()})
+    chain = prompt | llm | StrOutputParser()
+    chain.ainvoke()
 
     with open("coverletter.md", "w") as md_file:
         md_file.write(cover_letter)
