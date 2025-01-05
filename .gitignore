@@ -1,0 +1,9 @@
+venv
+.mypy_cache
+.env
+main.aux
+main.fdb_latexmk
+main.fls
+main.log
+main.out
+main.synctex.gz

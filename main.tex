@@ -7,6 +7,7 @@
 
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage{bold-extra}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -23,10 +24,10 @@
 
 %----------FONT OPTIONS----------
 % sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\usepackage[sfdefault]{FiraSans}
+\usepackage[sfdefault]{roboto}
+\usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
 
 % serif
 % \usepackage{CormorantGaramond}
@@ -106,7 +107,7 @@
 
 %----------HEADING----------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://sourabhbajaj.com/}{\Large Arjun Sarao}} & \href{mailto:arjun.sarao@uwaterloo.ca}{arjun.sarao@uwaterloo.ca} \\
+  \textbf{\Large Arjun Sarao} & \href{mailto:arjun.sarao@uwaterloo.ca}{arjun.sarao@uwaterloo.ca} \\
   \href{https://arjunsarao.dev/}{https://arjunsarao.dev/} & 
   \href{https://github.com/DarkHawk727}{https://github.com/DarkHawk727} \\
 \end{tabular*}
@@ -123,57 +124,50 @@
 \section{Work Experience}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-      {\textbf{AI Solution Specialist} $|$ \emph{City of Hamilton ITS}}{Jan 2024 -- Present}
+        {\textbf{Generative AI Engineer} $|$ \emph{City of Hamilton ITS}}{Sept. 2024 -- Dec. 2024}
+        \resumeItemListStart
+          \resumeItem{Developed internal RAG chatbot web app using \texttt{embedchain}, \texttt{AzureOpenAI}, \texttt{streamlit}, and \texttt{chromadb}; Deployed to 240 users.}
+          \resumeItem{Researched and presented business use-cases and capabilities of cutting-edge generative AI tools to stakeholders.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+      {}{Jan. 2024 -- Apr. 2024}
       \resumeItemListStart
-        \resumeItem{Developed Retrieval Augmented Generation chatbot web app using \textbf{embedchain}, \textbf{AzureOpenAI}, \textbf{streamlit}, and \textbf{chromadb}.}
+        \resumeItem{Developed RAG chatbot web app using \texttt{embedchain}, \texttt{AzureOpenAI}, \texttt{streamlit}, and \texttt{chromadb}.}
         \resumeItem{Researched and presented business use-cases and capabilities of cutting-edge generative AI tools to stakeholders.}
       \resumeItemListEnd
     \resumeProjectHeading
-      {\textbf{Full-Stack Web Developer} $|$ \emph{Starai Tutoring}}{May 2022 -- March 2023}
+      {\textbf{Full-Stack Web Developer} $|$ \emph{Starai Tutoring}}{May. 2022 -- Mar. 2023}
       \resumeItemListStart
-        \resumeItem{Informed, shaped client POV; Wire-framed a responsive, multi-page static website based on business needs in \textbf{Figma}.}
-        \resumeItem{Developed  website using \textbf{JavaScript (React.js)} in conjunction with
-        \textbf{Bulma.css}, hosted it on \textbf{GitHub Pages}.}
-        \resumeItem{Implemented sign-up form submission via \textbf{Firebase} cloud-function and SMS notifications with \textbf{Twilio}.}
+        % \resumeItem{Informed, shaped client POV; Wire-framed a responsive, multi-page static website based on business needs in \textbf{Figma}.}
+        \resumeItem{Developed website using \texttt{JavaScript (React.js)} in conjunction with
+        \texttt{Bulma.css}, hosted it on \texttt{GitHub Pages}.}
+        \resumeItem{Implemented sign-up form submission via \texttt{Firebase} cloud-function and SMS notifications with \texttt{Twilio}.}
       \resumeItemListEnd
 \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-            \resumeProjectHeading
-          {\textbf{ARM-LEG Simulator} $|$ \emph{Pseudo-ARM Assembly Simulator written in Python}}{November 2023}
-          \resumeItemListStart
-                \resumeItem {Wrote CLI program following modular design \textbf{Python} best practices, and Object-Oriented Design principles.}
-                \resumeItem {Added test-suite using \textbf{pytest} and linting using \textbf{ruff}, integrated them into \textbf{GitHub Actions}.}
-          \resumeItemListEnd
         \resumeProjectHeading
-          {\textbf{DeepLog} $|$ \emph{MacOS App for Productivity Tracking.}}{November 2023}
-          \resumeItemListStart
-                \resumeItem {Implemented app using \textbf{SwiftUI}.}
-                \resumeItem {Added metrics such as time between accomplishments, churn-rate, and activity graph; stored metrics in \textbf{supabase} database.}
-          \resumeItemListEnd
-      % \resumeProjectHeading
-      %     {\textbf{UniGPT} $|$ \emph{LLM-Powered Web-app for University Help.}}{August 2023}
-      %     \resumeItemListStart
-      %           \resumeItem {Created  and deployed a multi-page \textbf{Python} front-end using \textbf{Streamlit}.}
-      %           \resumeItem {Integrated \textbf{GPT-4} via \textbf{LangChain} to provide enhanced, domain-specific, knowledge such as PDF Q\&A, Flashcard Generation, and Math Help via \textbf{sympy}.}
-      %     \resumeItemListEnd
+        {\href{https://github.com/DarkHawk727/ViT-tinygrad}{\textbf{ViT-tinygrad}} $|$ \emph{Vision Transformer Paper Implementation}}{Jan. 2025}
+        \resumeItemListStart
+              \resumeItem {}
+              \resumeItem {}
+              \resumeItem {}
+        \resumeItemListEnd
         \resumeProjectHeading
-          {\textbf{SeeFood} $|$ \emph{ Image Recognition Java App with TensorFlow CNN}}{January 2022}
+          {\href{https://github.com/DarkHawk727/TabTransformer-tinygrad}{\textbf{TabTransformer-tinygrad}} $|$ \emph{Tabular Transformer Paper Implementation}}{Oct. 2024}
           \resumeItemListStart
-                \resumeItem {Curated dataset from Kaggle; Wrote \textbf{Python} scripts for scraping images from google images and preprocessing.}
-                \resumeItem {Wrote model architecture using \textbf{TensorFlow} and \textbf{Keras}; Used elu activation and ADAM optimizer.}
+                \resumeItem {Reimplemented \emph{TabTransformer: Tabular Data Modeling Using Contextual Embeddings} paper from Amazon in \texttt{tinygrad}.}
+                \resumeItem {Used Hyperparameter Optimization for number of MLP hidden layers; Added custom SELU activation function; Implemented early stopping.}
+                \resumeItem {Compared performance of TabTransformer against MLP on \texttt{insurance\_co} dataset; Achieved a \emph{74.4\%} AUC performance (4.7\% improvement, paper result).}
+          \resumeItemListEnd
+
+        \resumeProjectHeading
+          {\textbf{SeeFood} $|$ \emph{ Image Recognition Java App with TensorFlow CNN}}{Jan. 2022}
+          \resumeItemListStart
+                \resumeItem {Used \texttt{BeautifulSoup4} and \texttt{bing\_image\_downloader} \texttt{Python} packages to scrape \textasciitilde3.5k images from Kaggle and Bing to create image dataset.}
+                \resumeItem {Developed \texttt{CNN}s using \texttt{TensorFlow}; Achieved validation accuracy of approximately \emph{90\%}.}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -184,8 +178,7 @@
     \resumeProjectHeading
       {\textbf{Honours Bachelor of Computer Science (CO-OP)} $|$ \emph{University of Waterloo}}{Sept. 2022 -- present}
       \resumeItemListStart
-      \resumeItem{Awarded the President's Scholarship.}
-      \resumeItem{\textbf{Relevant Coursework}: Designing Functional Programs (\textbf{Racket}), Elementary Algorithm Design and Data Abstraction (\textbf{C}), Object-Oriented Software Development (\textbf{C++}), Calculus III, Linear Algebra II}
+      \resumeItem{\textbf{Relevant Coursework}: Introduction to Database Management (\textbf{SQL}), Data Structures and Algorithms (\textbf{C++}), Compilers (\textbf{C++}), Linear Models, Statistics, Linear Algebra II, Calculus III, Object-Oriented Software Development (\textbf{C++}), Elementary Algorithm Design and Data Abstraction (\textbf{C}), Introduction to Database Management (\textbf{SQL}), Designing Functional Programs (\textbf{Racket})}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -194,42 +187,41 @@
 \section{Self Learning}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Machine Learning Specialization} $|$ \emph{Stanford Online + Coursera}}{August 2022}
+          {\textbf{Machine Learning Specialization} $|$ \emph{Stanford Online + Coursera}}{Aug. 2022}
           \resumeItemListStart
-                \resumeItem {Supervised Machine Learning: Regression and Classification (\textbf{Linear Regression, Logistic Regression})}
-                \resumeItem {Advanced Learning Algorithms (\textbf{Neural Networks, Decision Trees})}
-                \resumeItem {Unsupervised Learning, Recommenders, Reinforcement Learning (\textbf{Clustering, Anomaly Detection, Collaborative Filtering, Deep Q-Learning})}
+                \resumeItem {Supervised Machine Learning: Regression and Classification (\textbf{Linear Regression}, \textbf{Logistic Regression})}
+                \resumeItem {Advanced Learning Algorithms (\textbf{NN}s, \textbf{Decision Trees})}
+                \resumeItem {Unsupervised Learning, Recommenders, Reinforcement Learning (\textbf{Clustering}, \textbf{Anomaly Detection}, \textbf{Collaborative Filtering}, \textbf{Deep Q-Learning})}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Deep Learning Specialization} $|$ \emph{Coursera}}{July 2022}
+          {\textbf{Deep Learning Specialization} $|$ \emph{Deeplearning.ai + Coursera}}{Jul. 2022}
           \resumeItemListStart
-                \resumeItem {Neural Networks and Deep Learning (\textbf{NNs})}
+                \resumeItem {Neural Networks and Deep Learning (\textbf{NN}s)}
                 \resumeItem {Improving Deep Neural Networks: Hyperparameter Tuning, Regularization, and Optimization}
-                \resumeItem {Convolutional Neural Networks (\textbf{CNNs})}
-                \resumeItem {Sequence Models (\textbf{RNNs, GRUs, LSTMs, Transformer Networks})}
+                \resumeItem {Convolutional Neural Networks (\textbf{CNN}s)}
+                \resumeItem {Sequence Models (\textbf{RNN}s, \textbf{GRU}s, \textbf{LSTM}s, \textbf{Transformers})}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, C/C++, HTML/CSS, Bash} \\
-     \textbf{Developer Tools}{: Git, Google Cloud Platform (Firebase), VS Code, PyCharm, IntelliJ} \\
-     \textbf{Libraries}{:  NumPy, pandas, Matplotlib, langchain, streamlit, sympy, supabase}
+    \textbf{Developer Tools}{: \texttt{Linux (Ubuntu)}, \texttt{Git}, \texttt{Github Actions}, \texttt{Google Cloud Platform (Firebase)}, \texttt{VSCode}} \\
+    \textbf{Libraries}{: \texttt{tinygrad}, \texttt{PyTorch}, \texttt{NumPy}, \texttt{pandas}, \texttt{Matplotlib}, \texttt{DSPy}, \texttt{langchain}, \texttt{streamlit}, \texttt{sympy}, \texttt{supabase}}
     }}
- \end{itemize}
+  \end{itemize}
 
 %-----------PERSONAL ACHIEVMENTS-----------
-\section{Personal Achievements}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-      \textbf{Hackathons}{: 2x Google Cloud Prize Recipient (\emph{UncommonHacks, Hack-o-Lantern}), 1st place People's Choice (\emph{WinHacks 2021}), Best Theme Hack (\emph{PreHackstoric}) } \\
-        }
-     % \textbf{Cadets}{: Achieved rank of Chief Petty Officer 2nd Class; Appointed Regulating Petty Officer; Obtained CanSail 1\&2.}}
-     \textbf{Chief Petty Officer 2nd Class}{: Appointed corps Regulating Petty Officer; Certified CanSail 2.}}
- \end{itemize}
+% \section{Personal Achievements}
+%   \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%       \textbf{Hackathons}{: 2x Google Cloud Prize Recipient (\emph{UncommonHacks, Hack-o-Lantern}), 1st place People's Choice (\emph{WinHacks 2021}), Best Theme Hack (\emph{PreHackstoric}) } \\
+%         }
+%       % \textbf{Cadets}{: Achieved rank of Chief Petty Officer 2nd Class; Appointed Regulating Petty Officer; Obtained CanSail 1\&2.}}
+%       \textbf{Chief Petty Officer 2nd Class}{: Appointed corps Regulating Petty Officer; Certified CanSail 2.}}
+%   \end{itemize}
 
 
 %-------------------------------------------
